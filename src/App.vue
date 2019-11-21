@@ -1,96 +1,26 @@
 <template>
-  <div id="root">
-    <h1>{{ title }}</h1>
-
-    <form
-      @submit="checkForm"
-      action="https://vuejs.org/"
-      method="post"
-    >
-
-      <p v-if="errors.length">
-        <b>Por favor, corrija o(s) seguinte(s) erro(s):</b>
-        <ul>
-          <li v-for="error in errors" :key="error">{{ error }}</li>
-        </ul>
-      </p>
-
-      <p>
-        <label for="name">Nome</label>
-        <input
-          id="name"
-          v-model="name"
-          type="text"
-          name="name"
-        >
-      </p>
-
-      <p>
-        <label for="age">Idade</label>
-        <input
-          id="age"
-          v-model="age"
-          type="number"
-          name="age"
-          min="0"
-        >
-      </p>
-
-      <p>
-        <label for="movie">Filme favorito</label>
-        <select
-          id="movie"
-          v-model="movie"
-          name="movie"
-        >
-          <option>Star Wars</option>
-          <option>Vanilla Sky</option>
-          <option>Atomic Blonde</option>
-        </select>
-      </p>
-
-      <p>
-        <input
-          type="submit"
-          value="Enviar"
-        >
-      </p>
-
-    </form>
-
+  <div id="app">
+    <Topo></Topo>
+    <Centro></Centro>
+    <Rodape></Rodape>
   </div>
 </template>
 
 <script>
+
+import Topo from './components/Topo.vue'
+import Centro from './components/Centro.vue'
+import Rodape from './components/Rodape.vue'
+
 export default {
-  data() {
-    return {
-      title: "Welcome to Thunderstruck",
-      errors: [],
-      name: null,
-      age: null,
-      movie: null
-    }
-  },
-  methods:{
-    checkForm: function (e) {
-      if (this.name && this.age) {
-        return true;
-      }
-
-      this.errors = [];
-
-      if (!this.name) {
-        this.errors.push('O nome é obrigatório.');
-      }
-      if (!this.age) {
-        this.errors.push('A idade é obrigatória.');
-      }
-
-      e.preventDefault();
-    }
+  name: 'ss',
+  components: {
+    Topo,
+    Centro,
+    Rodape
   }
 }
+
 </script>
 
 <style>
