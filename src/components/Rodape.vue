@@ -11,7 +11,7 @@
 
 <style>
 .rodape {
-  background-color: #0000FF;
+  background-color: #D2B48C;
   text-align: center;
 }
 </style>

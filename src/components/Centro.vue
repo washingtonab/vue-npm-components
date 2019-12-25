@@ -11,7 +11,7 @@
 
 <style>
 .centro {
-  background-color: #00FF00;
+  background-color: #BDB76B;
   text-align: center;
 }
 </style>

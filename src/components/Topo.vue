@@ -11,7 +11,7 @@
 
 <style>
 .topo {
-  background-color: #FF0000;
+  background-color: #BC8F8F;
   text-align: center;
 }
 </style>
